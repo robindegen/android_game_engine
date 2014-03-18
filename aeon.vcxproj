@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="jni\aeon.h" />
+    <ClInclude Include="jni\buffer.h" />
+    <ClInclude Include="jni\config.h" />
+    <ClInclude Include="jni\console.h" />
+    <ClInclude Include="jni\engine.h" />
+    <ClInclude Include="jni\eventlistener.h" />
+    <ClInclude Include="jni\fileinput.h" />
+    <ClInclude Include="jni\image.h" />
+    <ClInclude Include="jni\imageloader.h" />
+    <ClInclude Include="jni\imageloader_png.h" />
+    <ClInclude Include="jni\lodepng.h" />
+    <ClInclude Include="jni\renderable.h" />
+    <ClInclude Include="jni\resource.h" />
+    <ClInclude Include="jni\resourcemanager.h" />
+    <ClInclude Include="jni\shader.h" />
+    <ClInclude Include="jni\singleton.h" />
+    <ClInclude Include="jni\sprite.h" />
+    <ClInclude Include="jni\texture.h" />
+    <ClInclude Include="jni\utils.h" />
+    <ClInclude Include="jni\vertex.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="jni\console.cpp" />
+    <ClCompile Include="jni\engine.cpp" />
+    <ClCompile Include="jni\fileinput.cpp" />
+    <ClCompile Include="jni\gl_code.cpp" />
+    <ClCompile Include="jni\image.cpp" />
+    <ClCompile Include="jni\imageloader_png.cpp" />
+    <ClCompile Include="jni\lodepng.cpp" />
+    <ClCompile Include="jni\resourcemanager.cpp" />
+    <ClCompile Include="jni\shader.cpp" />
+    <ClCompile Include="jni\sprite.cpp" />
+    <ClCompile Include="jni\texture.cpp" />
+    <ClCompile Include="jni\utils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="jni\Android.mk" />
+    <None Include="jni\Application.mk" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{32D6FB94-8FDC-47B6-BEA6-01EC6862969A}</ProjectGuid>
+    <Keyword>MakeFileProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <NMakeBuildCommandLine>ndk-build</NMakeBuildCommandLine>
+    <NMakeCleanCommandLine>ndk-build clean</NMakeCleanCommandLine>
+    <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <IncludePath>E:\android\android-ndk-r9c\platforms\android-19\arch-arm\usr\include\;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <NMakeBuildCommandLine>ndk-build</NMakeBuildCommandLine>
+    <NMakeCleanCommandLine>ndk-build clean</NMakeCleanCommandLine>
+    <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
